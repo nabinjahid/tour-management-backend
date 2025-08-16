@@ -7,7 +7,7 @@ export enum Role {
     GUIDE = "GUIDE"
 }
 export interface IAuthProvider {
-    provider : string; // Google, Creadential
+    provider : "google" | "credentials"; // Google, Creadential
     providerId: string;
 }
 export enum IsActive {
@@ -26,7 +26,7 @@ export interface IUser {
 
     isDeleted?:string;
     isActive?:IsActive;
-    isVerified?: string;
+    isVerified?: boolean;
     role: Role;
 
     auths: IAuthProvider[];
